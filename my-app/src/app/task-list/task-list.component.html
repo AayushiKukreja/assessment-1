@@ -1,0 +1,6 @@
+<h1>Task Tracker App</h1>
+<ul *ngFor="let task of tasks" [appTaskHighlight]="task.status">
+  <li>{{ task.title }}</li>
+  <button (click)="getDetails(task.id)">View Details</button>
+  <button (click)="editDetails(task.id)">Edit</button>
+</ul>

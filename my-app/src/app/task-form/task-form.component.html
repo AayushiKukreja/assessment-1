@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Title</label>
+    <input type="text" [(ngModel)]="title" name="title" required />
+  </div>
+  <div>
+    <label>Description</label>
+    <textarea [(ngModel)]="description" name="description"></textarea>
+  </div>
+  <div>
+    <label>Status</label>
+    <select [(ngModel)]="status" name="status" required>
+      <option value="In Progress">High</option>
+      <option value="To Do">Medium</option>
+      <option value="Done">Low</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit">Create Task</button>
+  </div>
+</form>
